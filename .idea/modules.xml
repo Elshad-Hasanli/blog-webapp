@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/blog-site.iml" filepath="$PROJECT_DIR$/.idea/blog-site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-site-database/blog-site-database.iml" filepath="$PROJECT_DIR$/blog-site-database/blog-site-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-site-web/blog-site-web.iml" filepath="$PROJECT_DIR$/blog-site-web/blog-site-web.iml" />
+    </modules>
+  </component>
+</project>
