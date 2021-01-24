@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head(~{::title}, ~{::link})">
+
+    <link rel="stylesheet" th:href="@{css/main.css}"/>
+</head>
+<body>
+<header>
+    <!--Navbar section repeat every page-->
+
+    <nav th:replace="fragments/navbar::navbar">
+
+    </nav>
+
+    <!--header about component optional-->
+    <div class="contianer header-about">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-4">
+                    <img src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-black-default-avatar-image_2237212.jpg" alt="">
+                    <div>
+                        <a href="">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <h4 class="h4 m-0 p-0">Hello, I'm Elshad !</h4>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi? Quam commodi quas qui officiis adipisci tempore dolorem error nisi?</h6>
+                        <div class="buttons">
+                            <button class="btn btn-subscribe" href="">
+                                <i class="far fa-bell"></i>
+                                Subscribe
+                            </button>
+                            <button class="btn-read-more">
+                                <span class="btn-text">Read More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 5 Blog post For Home Page-->
+
+<section>
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-lg-12 post-container p-0">
+                <div class="post">
+                    <div class="imgbox">
+                        <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="post-photo1">
+                    </div>
+                    <div class="post-body">
+                        <div>
+                            <h5>Card title</h5>
+                            <p >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="post">
+                    <div class="imgbox">
+                        <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="post-photo1">
+                    </div>
+                    <div class="post-body">
+                        <div>
+                            <h5>Card title</h5>
+                            <p >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 load-all">
+                <a href="/blog">View All Articles</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer th:fragment="fragments/footer::footer"></footer>
+
+  <div th:fragment="fragments/js::js"></div>
+
+
+</body>
+</html>

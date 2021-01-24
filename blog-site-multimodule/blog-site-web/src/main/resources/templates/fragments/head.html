@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title,links)">
+    <!--Meta tags-->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Elshad Hasanli Official Web Blog">
+    <meta name="keywords" content="Elshad Hasanli Official Web Blog">
+    <meta name="robots" content="index,follow">
+    <meta name="Copyright" content="2021 Elshad Hasanli Web Blog">
+    <title>Web is Magic</title>
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap"/>
+    <!-- Fontawesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"/>
+    <!-- Main css -->
+    <th:block th:replace="${links}" />
+</head>
+</html>
