@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head(~{::title}, ~{::link})">
-
+<head th:replace="fragments/head :: head(~{::link})">
     <link rel="stylesheet" th:href="@{css/main.css}"/>
 </head>
 <body>
@@ -35,7 +34,7 @@
                         <h4 class="h4 m-0 p-0">Hello, I'm Elshad !</h4>
                         <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi? Quam commodi quas qui officiis adipisci tempore dolorem error nisi?</h6>
                         <div class="buttons">
-                            <button class="btn btn-subscribe" href="">
+                            <button class="btn btn-subscribe">
                                 <i class="far fa-bell"></i>
                                 Subscribe
                             </button>
@@ -95,7 +94,7 @@
 
 <footer th:replace="fragments/footer::footer"></footer>
 
-  <div th:replace="fragments/js::js"></div>
+<div th:replace="fragments/js::js"></div>
 
 
 </body>
