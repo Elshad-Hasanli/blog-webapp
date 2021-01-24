@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="blog-site-web" />
         <module name="blog-site-database" />
+        <module name="blog-site-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="blog-site" target="13" />
-      <module name="blog-site-database" target="13" />
-      <module name="blog-site-web" target="13" />
+    <bytecodeTargetLevel target="11">
+      <module name="blog-site" target="11" />
+      <module name="blog-site-database" target="11" />
+      <module name="blog-site-web" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
