@@ -87,8 +87,21 @@ public class Contents {
         return adminsByContentCreator;
     }
 
+    public Contents() {
+    }
+
     public void setAdminsByContentCreator(Admins adminsByContentCreator) {
         this.adminsByContentCreator = adminsByContentCreator;
+    }
+
+    public Contents(Integer id, String contentHeader, String contentBody, String contentPic, Timestamp postedTime, Admins adminsByContentCreator, Categories categoriesByContentCategory) {
+        this.id = id;
+        this.contentHeader = contentHeader;
+        this.contentBody = contentBody;
+        this.contentPic = contentPic;
+        this.postedTime = postedTime;
+        this.adminsByContentCreator = adminsByContentCreator;
+        this.categoriesByContentCategory = categoriesByContentCategory;
     }
 
     @ManyToOne

@@ -11,6 +11,14 @@ public class Categories {
     private Integer id;
     private String name;
 
+    public Categories() {
+    }
+
+    public Categories(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     @Column(name = "id")
     public Integer getId() {

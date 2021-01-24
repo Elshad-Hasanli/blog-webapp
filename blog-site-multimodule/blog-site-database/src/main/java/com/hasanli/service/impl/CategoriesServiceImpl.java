@@ -5,9 +5,10 @@ import com.hasanli.dao.inter.CategoriesRepository;
 import com.hasanli.entity.Categories;
 import com.hasanli.service.inter.CategoriesServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 import java.util.List;
 
+@Service
 public class CategoriesServiceImpl implements CategoriesServiceInter {
     @Autowired
     CategoriesRepository categoriesRepository;
@@ -18,19 +19,20 @@ public class CategoriesServiceImpl implements CategoriesServiceInter {
 
     @Override
     public boolean updateCategory(Categories category) {
-        Categories updatedCategory=categoriesRepository.save(category);
-        if(updatedCategory!=null){
+        try {
+            categoriesRepository.save(category);
             return true;
-        }else{
+        }catch (Exception ex){
             return false;
         }
+
     }
 
     @Override
     public boolean addCategory(Categories category) {
         List<Categories> categories=categoriesRepository.findAll();
         for(Categories findedCategory:categories){
-            if(findedCategory.getName().equals(category.getName())){
+            if(findedCategory.getName().equalsIgnoreCase(category.getName())){
                 return false;
             }
 
@@ -48,9 +50,9 @@ public class CategoriesServiceImpl implements CategoriesServiceInter {
         categoriesRepository.deleteById(id);
 
         if( categoriesRepository.findById(id)==null){
-            return 0;
-        }else {
             return 1;
+        }else {
+            return 0;
         }
     }
 

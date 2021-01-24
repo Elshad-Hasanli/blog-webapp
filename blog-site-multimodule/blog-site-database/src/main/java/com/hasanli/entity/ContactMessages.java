@@ -6,6 +6,17 @@ import java.util.Objects;
 @Entity
 @Table(name = "contact_messages", schema = "hasanli-blog", catalog = "")
 public class ContactMessages {
+    public ContactMessages() {
+    }
+
+    public ContactMessages(Integer id, String senderName, String senderSurname, String senderMail, Byte messageReaded) {
+        this.id = id;
+        this.senderName = senderName;
+        this.senderSurname = senderSurname;
+        this.senderMail = senderMail;
+        this.messageReaded = messageReaded;
+    }
+
     private Integer id;
     private String senderName;
     private String senderSurname;

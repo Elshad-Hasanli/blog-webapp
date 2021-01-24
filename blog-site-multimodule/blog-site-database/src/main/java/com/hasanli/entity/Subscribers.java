@@ -8,6 +8,16 @@ import java.util.Objects;
 
 @Entity
 public class Subscribers {
+    public Subscribers() {
+    }
+
+    public Subscribers(Integer id, String subscriberMail, String subscriberName, String subscriberSurname) {
+        this.id = id;
+        this.subscriberMail = subscriberMail;
+        this.subscriberName = subscriberName;
+        this.subscriberSurname = subscriberSurname;
+    }
+
     private Integer id;
     private String subscriberMail;
     private String subscriberName;

@@ -9,5 +9,5 @@ public interface SubscribersServiceInter {
     public boolean addSubscriber(Subscribers subscriber);
     public int deleteSubscriber(Integer id);
     public Integer countOfSubscribers();
-    public Subscribers findSubscriber(String name);
+    public  List<Subscribers> findSubscriber(String subscriberMail);
 }

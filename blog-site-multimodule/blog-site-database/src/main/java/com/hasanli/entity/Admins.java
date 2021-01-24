@@ -75,6 +75,18 @@ public class Admins {
         this.password = password;
     }
 
+    public Admins() {
+    }
+
+    public Admins(Integer id, String name, String surname, String email, String profilePic, String password) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.profilePic = profilePic;
+        this.password = password;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -4,25 +4,28 @@ import com.hasanli.dao.inter.AdminsRespository;
 import com.hasanli.entity.Admins;
 import com.hasanli.service.inter.AdminsServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
+@Service
 public class AdminsServiceImpl implements AdminsServiceInter {
     @Autowired
     AdminsRespository adminsRespository;
 
     @Override
     public List<Admins> getAllAdmin() {
-        return adminsRespository.findAll();
+        List<Admins> allAdmins=adminsRespository.findAll();
+        return allAdmins;
     }
 
     @Override
     public boolean updateAdmin(Admins admin) {
-        Admins result=adminsRespository.save(admin);
-        if(result!=null){
+
+        try {
+            adminsRespository.save(admin);
             return true;
-        }else{
+        }catch (Exception ex){
             return false;
         }
 
@@ -50,9 +53,9 @@ public class AdminsServiceImpl implements AdminsServiceInter {
         adminsRespository.deleteById(id);
 
         if( adminsRespository.findById(id)==null){
-            return 0;
-        }else {
             return 1;
+        }else {
+            return 0;
         }
 
     }
